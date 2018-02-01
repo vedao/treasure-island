@@ -27,8 +27,9 @@ a:hover {
 }
 
 .round {
-    border: 6px solid #2196f3;
-    border-radius: 50%;
+    border: 3px solid #56585a;
+    border-radius: 10%;
+    width: 200px;
 }
 
 hr {
@@ -49,8 +50,7 @@ section {
 
 section p {
     max-width: 880px;
-    margin-bottom: 35px;
-    padding: 0 20px;
+    margin-bottom: 10px;
     line-height: 1.75;
 }
 
@@ -59,10 +59,6 @@ section h3 {
     text-transform: capitalize;
     font: 32px 'Open Sans', sans-serif;
     margin-bottom: 35px;
-}
-
-.smallerHeadline {
-    font-size: 75%;
 }
 
 @media (max-width: 1000px) {
@@ -98,7 +94,7 @@ header {
     z-index: 10;
     align-items: center;
     color: #fff;
-    padding: 35px 100px 20px;
+    padding: 20px 100px 20px;
     display: flex;
     justify-content: space-around;
 }
@@ -120,7 +116,8 @@ header nav li:last-child {
 }
 
 header h2 {
-    font-family: 'Open Sans', serif;
+    font-family: 'Raleway', serif;
+    font-weight: 100;
 }
 
 @media (max-width: 1000px) {
@@ -143,6 +140,25 @@ header h2 {
 HERO
 ------------------------*/
 
+.container {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.flex-container {
+    margin: 0 20px;
+    padding: 20px;
+}
+
+.textRight {
+    float: left;
+    text-align: left;
+}
+
 .hero {
     background-color: transparent;
     position: relative;
@@ -163,7 +179,7 @@ HERO
     background-color: #1a77c1;
 }
 
-.hero .background-image::after {
+.hero .background-image:after {
     content: '';
     position: fixed;
     top: 0;
@@ -175,10 +191,9 @@ HERO
 }
 
 .hero h1 {
-    font: bold 60px 'Henny Penny', serif;
-    font-size: 90px;
+    font: bold 60px 'Raleway', serif;
+    font-size: 45px;
     text-shadow: 3px 3px #000;
-    margin-bottom: 15px;
 }
 
 .hero h3 {
@@ -208,48 +223,16 @@ ABOUT
     background-color: #f7f7f7;
 }
 
-.about .grid li {
-    padding: 0 30px;
-    flex-basis: 33%;
-    text-align: center;
-}
-
-.about .grid li h4 {
-    color: #2196f3;
-    font-size: 20px;
-    margin-bottom: 25px;
-}
-
-.about .grid li p {
-    margin: 0;
-}
-
-@media (max-width: 1000px) {
-    .about .grid li {
-        flex-basis: 100%;
-        margin-bottom: 65px;
-    }
-    .about .grid li:last-child {
-        margin-bottom: 0;
-    }
-}
-
-@media (max-width: 600px) {
-    .about .grid li {
-        flex-basis: 100%;
-    }
-}
-
 
 /*------------------------
-ILLUSTRATIONS
+PORTFOLIO
 ------------------------*/
 
-.illustrations {
+.project {
     background-color: #fff;
 }
 
-.illustrations .grid li {
+.project .grid li {
     padding: 20px;
     height: 350px;
     border-radius: 3px;
@@ -259,43 +242,50 @@ ILLUSTRATIONS
     background-color: #333;
 }
 
-.illustrations .grid li.small {
+.project .grid li.small {
     flex-basis: 40%;
 }
 
-.illustrations .grid li.large {
+.project .grid li.large {
     flex-basis: 60%;
 }
 
 @media (max-width: 1000px) {
-    .illustrations .grid li.small,
-    .illustrations .grid li.large {
+    .project .grid li.small,
+    .project .grid li.large {
         flex-basis: 100%;
     }
 }
 
 
 /*------------------------
-CHAPTER 1
+CONTACT
 ------------------------*/
 
-.chap1 {
-    background-color: #f7f7f7;
-    margin-top: 0;
+.formCotainer {
+    display: flex;
+    flex-direction: column;
 }
 
-.chap1 p {
-    text-align: left;
+.formCotainer input,
+textarea {
+    font-size: 25px;
+    padding: 0 20px;
+    margin: 20px 20px;
 }
 
-.chap1 .song {
-    text-align: center;
-    width: 80%;
-    font-size: 20px;
-    font-weight: 300;
-    line-height: 1.25;
-    margin-bottom: 20px;
-    padding: 0;
+.submitBtn {
+    height: 35px;
+    width: 120px;
+    font-size: 21px !important;
+    border: 0;
+    border-radius: 3px;
+}
+
+.submitBtn:hover {
+    color: #fff;
+    background-color: rgba(131, 131, 131, 0.884);
+    cursor: pointer;
 }
 
 
